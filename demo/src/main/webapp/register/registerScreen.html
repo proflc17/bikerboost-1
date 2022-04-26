@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User Screen</title>
-    <script src="userScreen.js"></script>
+    <title>Register</title>
+    <script src="registerScreen.js"></script>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <style>
@@ -17,17 +18,12 @@
     }
 
     .login-form-1 {
-        padding: 5%;
-        background: #DCDCE4;
+        padding: 0%;
+        height: min-content;
     }
 
     .login-form-1 h3 {
-        text-align: left;
-        color: #333;
-    }
-
-    .login-form-1 h5 {
-        text-align: left;
+        text-align: center;
         color: #333;
     }
 
@@ -60,7 +56,7 @@
         background-color: #fff;
     }
 
-    .login-form-2 .Register {
+    .login-form-2 .Login {
         color: #fff;
         font-weight: 600;
         text-decoration: none;
@@ -71,18 +67,15 @@
         color: #ffffff;
         margin-bottom: 5%;
     }
-
-    .image-container{
-        align-content: revert;
-    }
 </style>
+
 <body>
 
 <nav class="navbar navbar-full">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
-                <img src="../meeting/Icon.png" alt="..." height="36">
+                <img src="Icon.png" alt="..." height="36">
             </a>
             <a class="navbar-brand"><h3>BikerBoost</h3></a>
         </div>
@@ -92,31 +85,33 @@
 <div class="container login-container">
     <div class="row">
         <div class="col-md-6 login-form-1">
-            <div class="container image-container">
-                <img src="userImage.png" height="150px" align="right">
-            </div>
-            <div>
-                <h3>User</h3>
-                <h5>Firstname Lastname</h5>
-                <h5>Email</h5>
-                <h5>Following</h5>
-            </div>
+            <img src="registerScreen.png" class="img-rounded">
         </div>
 
         <div class="col-md-6 login-form-2">
-            <h3>Meeting</h3>
+            <h3>Sign Up</h3>
             <form>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Meeting Code" value=""/>
+                    <input type="text" class="form-control" placeholder="Your Name" value=""/>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btnSubmit" onclick="createCode()" value="Create Code"/>
+                    <input type="text" class="form-control" placeholder="Your Username" value=""/>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btnSubmit" onclick="joinMeeting()" value="Join Meeting"/>
+                    <input type="text" class="form-control" placeholder="Your Email" value=""/>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btnSubmit" onclick="returnToLoginScreen()" value="Return to Login Screen"/>
+                    <input type="password" class="form-control" placeholder="Your Password" value=""/>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Repeat Your Password" value=""/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" onclick="signUpUser()" value="Sign Up"/>
+                </div>
+                <div class="form-group">
+                    <a href="http://localhost:63342/BikerBoostGit/demo/src/main/webapp/login/loginScreen.html?_ijt=b8n97mpmbtt3sgo9cl77n75cpb"
+                       class="Login" value="Login">Want to login?</a>
                 </div>
             </form>
         </div>

@@ -17,7 +17,3 @@ const loginUser = () => {
             return response.json()
         }).catch(err => console.log(err))
 }
-
-const registerUser = () => {
-
-}
