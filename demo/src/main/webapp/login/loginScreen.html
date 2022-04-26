@@ -2,108 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Screen</title>
+    <title>Login</title>
     <script src="loginScreen.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <style>
-        .heading {
-            color: black;
-            text-align: center;
-        }
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        .jumbotron {
-            height: 500px;
-        }
-
-        .navba {
-            background-color: #000035;
-            color: white;
-            word-spacing: 20px;
-        }
-    </style>
 </head>
-<body>
 
-<nav class="navbar navbar-expand-sm navba navbar-dark justify-content-center sticky-top">
+<style>
+    .login-container {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+    .login-form-1 {
+        padding: 0%;
+        height: min-content;
+    }
+
+    .login-form-1 h3 {
+        text-align: center;
+        color: #333;
+    }
+
+    .login-form-2 {
+        padding: 5%;
+        background: #000035;
+        height: min-content;
+    }
+
+    .login-form-2 h3 {
+        text-align: center;
+        color: #fff;
+    }
+
+    .login-container form {
+        padding: 10%;
+    }
+
+    .btnSubmit {
+        width: 50%;
+        border-radius: 1rem;
+        padding: 1.5%;
+        border: none;
+        cursor: pointer;
+    }
+
+    .login-form-2 .btnSubmit {
+        font-weight: 600;
+        color: #000035;
+        background-color: #fff;
+    }
+
+    .login-form-2 .ForgetPwd {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .login-form-1 .ForgetPwd {
+        color: #0062cc;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .navbar {
+        background-color: #000035;
+        color: #ffffff;
+        margin-bottom: 5%;
+    }
+</style>
+
+<nav class="navbar navbar-full">
     <div class="container-fluid">
-        <ul class=" navbar-nav">
-            <li class="nav-item active ">
-                <a class="navbar-brand">
-                    <img src="../Icon.png" alt="Logo" style="left: revert" width="50px">
-                </a>
-            </li>
-            <li class="nav-item active ">
-                <div class="navbar-header">
-                    <h1>BikerBoost</h1>
-                </div>
-            </li>
-        </ul>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img src="Icon.png" alt="..." height="36">
+            </a>
+            <a class="navbar-brand"><h3>BikerBoost</h3></a>
+        </div>
     </div>
 </nav>
 
-<p></p>
-
-<div class="container">
+<div class="container login-container">
     <div class="row">
-        <div class="col-sm-4 text-left">
+        <div class="col-md-6 login-form-1">
             <img src="loginScreen.png" class="img-responsive">
         </div>
 
-        <div class="col-sm-4 text-left">
-            <div class="jumbotron text-center">
-                <h2 class="heading">Login</h2>
+        <div class="col-md-6 login-form-2">
+            <h3>Login</h3>
+            <form>
                 <div class="form-group">
-                    <label for="usrLogin">Username</label>
-                    <input type="text" class="form-control" id="usrLogin">
+                    <input type="text" class="form-control" placeholder="Your Email" value=""/>
                 </div>
                 <div class="form-group">
-                    <label for="pwdLogin">Password</label>
-                    <input type="password" class="form-control" id="pwdLogin">
-                </div>
-                <button type="button" class="btn btn-outline-dark btn-block" onclick="loginUser()">LOGIN</button>
-            </div>
-        </div>
-
-        <div class="col-sm-4 text-left">
-            <div class="jumbotron text-center">
-                <h2 class="heading">Register</h2>
-                <div class="form-group">
-                    <label for="firstname">Firstname</label>
-                    <input type="text" class="form-control" id="firstname">
+                    <input type="password" class="form-control" placeholder="Your Password" value=""/>
                 </div>
                 <div class="form-group">
-                    <label for="lastname">Lastname</label>
-                    <input type="text" class="form-control" id="lastname">
+                    <input type="submit" class="btnSubmit" value="Login"/>
                 </div>
                 <div class="form-group">
-                    <label for="userRegister">Username</label>
-                    <input type="text" class="form-control" id="userRegister">
+                    <a href="#" class="ForgetPwd" value="Login">Want to register?</a>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email">
-                </div>
-                <div class="form-group">
-                    <label for="pwdRegister">Password</label>
-                    <input type="password" class="form-control" id="pwdRegister">
-                </div>
-                <button type="button" class="btn btn-outline-dark btn-block" onclick="registerUser()">REGISTER</button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
