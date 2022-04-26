@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Screen</title>
+    <script src="userScreen.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<style>
+    .jumbotron {
+        height: 500px;
+    }
+
+    .heading {
+        color: black;
+        text-align: center;
+    }
+
+    .navba {
+        background-color: #000035;
+        color: white;
+        word-spacing: 20px;
+    }
+</style>
+<body>
+
+<nav class="navbar navbar-expand-sm navba navbar-dark justify-content-center sticky-top">
+    <div class="container-fluid">
+        <ul class=" navbar-nav">
+            <li class="nav-item active ">
+                <a class="navbar-brand">
+                    <img src="../Icon.png" alt="Logo" style="center: revert" width="50px">
+                </a>
+            </li>
+            <li class="nav-item active ">
+                <div class="navbar-header">
+                    <h1>BikerBoost</h1>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-4 text-left">
+            <div class="jumbotron text-center">
+                <img src="userImage.png" class="img-responsive">
+                </br>
+                <h2 class="heading">User</h2>
+                <h4>email</h4>
+                <h4>firstname lastname</h4>
+                <h4>friends</h4>
+            </div>
+        </div>
+
+        <div class="col-sm-8 text-left">
+            <div class="jumbotron text-center">
+                <h2 class="heading">Meetings</h2>
+                <div class="form-group">
+                    <input type="code" class="form-control" id="code" placeholder="Enter Code" name="code">
+                </div>
+                <button type="button" class="btn btn-outline-dark btn-block" onclick="createMeeting()">CREATE MEETING</button>
+                <button type="button" class="btn btn-outline-dark btn-block" onclick="joinMeeting()">JOIN MEETING</button>
+                <button type="button" class="btn btn-outline-dark btn-block" onclick="returnToLoginScreen()">RETURN TO LOGIN SCREEN</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
