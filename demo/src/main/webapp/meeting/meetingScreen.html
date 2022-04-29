@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User Screen</title>
+    <title>Meeting Screen</title>
     <script src="meetingScreen.js"></script>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -22,23 +22,42 @@
         margin-bottom: 0%;
     }
 
-    .login-form-1 {
+    .login-form-2 {
         padding: 5%;
-        background: #DCDCE4;
+        background: #000035;
     }
 
-    .login-form-1 h3 {
+    .login-form-2 h3 {
         text-align: center;
-        color: #333;
+        color: #ffffff;
     }
 
-    .login-form-1 h5 {
+    .login-form-2 h5 {
         text-align: left;
-        color: #333;
+        color: #ffffff;
+    }
+
+    .login-form-2 h4 {
+        text-align: center;
+        color: #ffffff;
     }
 
     .image-container{
         align-items: center;
+    }
+
+    .btnSubmit {
+        width: 50%;
+        border-radius: 1rem;
+        padding: 1.5%;
+        border: none;
+        cursor: pointer;
+    }
+
+    .login-form-2 .btnSubmit {
+        font-weight: 600;
+        color: #000035;
+        background-color: #fff;
     }
 </style>
 <body>
@@ -56,12 +75,19 @@
 
 <div class="container login-container">
     <div class="row">
-        <div class="col-md-12 login-form-1">
+        <div class="col-md-12 login-form-2">
             <div>
                 <h3>Meeting</h3>
-                <div class="container image-container">
-                    <img src="userImage.png" height="150px" align="left">
+                <h4>00:00:00</h4>
+                <p>   </p>
+                <div class="form-group text-center">
+                    <input type="submit" class="btnSubmit" onclick="muteMyself()" value="Mute Myself"/>
                 </div>
+                <div class="form-group text-center">
+                    <input type="submit" class="btnSubmit" onclick="leaveMeeting()" value="Leave Meeting"/>
+                </div>
+
+
             </div>
         </div>
     </div>
